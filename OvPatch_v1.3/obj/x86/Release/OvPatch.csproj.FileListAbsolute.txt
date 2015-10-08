@@ -1,0 +1,42 @@
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.csproj.GenerateResource.Cache
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.exe
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.exe.licenses
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.exe
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.csprojResolveAssemblyReference.cache
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.exe.config
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.Properties.Resources.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.updaterForm.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.MainForm.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\ru-RU\OvPatch.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.MainForm.ru-RU.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\ru-RU\OvPatch.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.OneClickPatchForm.resources
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.exe.config
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.exe
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.pdb
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.exe
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.pdb
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\ru-RU\OvPatch.resources.dll
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.MainForm.resources
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.OneClickPatchForm.resources
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.Properties.Resources.resources
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.updaterForm.resources
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.MainForm.ru-RU.resources
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.csproj.GenerateResource.Cache
+D:\ \Backup\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\ru-RU\OvPatch.resources.dll
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.exe.config
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.exe
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.pdb
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.exe
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch.pdb
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\bin\Release\ru-RU\OvPatch.resources.dll
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.csprojResolveAssemblyReference.cache
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.MainForm.resources
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.OneClickPatchForm.resources
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.Properties.Resources.resources
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.updaterForm.resources
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.MainForm.ru-RU.resources
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch.csproj.GenerateResource.Cache
+C:\Users\Ольга\Desktop\PC\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\ru-RU\OvPatch.resources.dll

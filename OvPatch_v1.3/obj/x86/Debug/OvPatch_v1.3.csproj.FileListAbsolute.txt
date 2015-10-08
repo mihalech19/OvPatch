@@ -1,0 +1,10 @@
+c:\users\admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Debug\OvPatch_v1.3.exe
+c:\users\admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Debug\OvPatch_v1.3.pdb
+c:\users\admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1._3.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1.3.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1.3.exe
+c:\users\admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1.3.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1.3.csprojResolveAssemblyReference.cache
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1.3.exe.licenses
+C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1._3.MainForm.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Debug\OvPatch_v1._3.updaterForm.resources
