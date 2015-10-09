@@ -10,8 +10,11 @@
 <br>
 <b><span style="font-size: 22px">Теперь можете добавить в ваш autoexec.cfg полезные запрещённые команды:</span></b><br>
 <br>
-fog_override_enable 1 (Удаляет белый туман, который очень сильно виден тем кто отдаляет камеру) <br>
-dota_minimap_draw_fow 0 (Полностью удаляет Туман Войны на МиниКарте) <br>
+sv_cheats 1 // Анлочит все читерные команды под флагом cheat<br>
+fog_override_enable 1 // Удаляет белый туман, который очень сильно виден тем кто отдаляет камеру<br> 
+dota_minimap_draw_fow 0 // Полностью удаляет Туман Войны на МиниКарте<br><br> 
+dota_range_display 1 // Активирует графический радиус вокруг героя (зелёный круг)<br> 
+dota_range_display 1200 // Дистанция зелёного круга (Работает в Совместной игре с Ботами)<br>
 <br>
 <img src="http://jet-shark.ucoz.ru/images_posts_2/vzlom-override_vpk2.jpg" class="bbCodeImage LbImage" alt="[&#8203;IMG]" data-url="http://jet-shark.ucoz.ru/images_posts_2/vzlom-override_vpk2.jpg" style=""> <br>
 <br>
