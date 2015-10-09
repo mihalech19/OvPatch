@@ -1,0 +1,134 @@
+; Copyright © Microsoft Corp. & STALKER Style Team 2008 
+
+[Theme]
+
+; My Computer
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=C:\WINDOWS\explorer.exe,0
+
+; My Documents
+[CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}\DefaultIcon]
+DefaultValue=C:\WINDOWS\SYSTEM32\mydocs.dll,0
+
+; My Network Places
+[CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\DefaultIcon]
+DefaultValue=C:\WINDOWS\SYSTEM32\shell32.dll,17
+
+; Recycle Bin
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+full=C:\WINDOWS\SYSTEM32\shell32.dll,32
+empty=C:\WINDOWS\SYSTEM32\shell32.dll,31
+
+[Control Panel\Cursors]
+Arrow=%WinDir%Resources\Themes\STALKER\Ñursors\Normal.ani
+Help=%WinDir%Resources\Themes\STALKER\Ñursors\Help.ani
+AppStarting=%WinDir%Resources\Themes\STALKER\Ñursors\Wait.ani
+Wait=%WinDir%Resources\Themes\STALKER\Ñursors\Busy.ani
+NWPen=
+No=
+SizeNS=
+SizeWE=
+Crosshair=
+IBeam=
+SizeNWSE=
+SizeNESW=
+SizeAll=
+UpArrow=
+DefaultValue=Stalker
+Link=
+
+[Control Panel\Desktop]
+Wallpaper=%WinDir%Resources\Themes\STALKER\wallpaper\stalker_01_1280.jpg
+TileWallpaper=0
+WallpaperStyle=2
+Pattern=
+ScreenSaveActive=0
+
+[Control Panel\Desktop\WindowMetrics]
+
+[Metrics]
+IconMetrics=76 0 0 0 75 0 0 0 75 0 0 0 1 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
+NonclientMetrics=84 1 0 0 1 0 0 0 17 0 0 0 17 0 0 0 18 0 0 0 25 0 0 0 240 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 71 114 97 102 102 105 116 105 49 67 84 84 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17 0 0 0 17 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 188 2 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 0 0 0 19 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
+
+[boot]
+SCRNSAVE.EXE=
+
+
+[MasterThemeSelector]
+MTSM=DABJDKT
+ThemeColorBPP=4
+
+[VisualStyles]
+Path=%WinDir%resources\Themes\STALKER\STALKER.msstyles
+ColorStyle=NormalColor
+Size=NormalSize
+[AppEvents\Schemes\Apps\.Default\.Default\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\def2.wav
+[AppEvents\Schemes\Apps\.Default\AppGPFault\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\error gravi.wav
+[AppEvents\Schemes\Apps\.Default\Close\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\device in.wav
+[AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\device out.wav
+[AppEvents\Schemes\Apps\.Default\DeviceFail\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\error moan.wav
+[AppEvents\Schemes\Apps\.Default\LowBatteryAlarm\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\MailBeep\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\Maximize\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\MenuCommand\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\MenuPopup\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\menu.wav
+[AppEvents\Schemes\Apps\.Default\Minimize\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\minimize.wav
+[AppEvents\Schemes\Apps\.Default\Open\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\PrintComplete\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\RestoreDown\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\maximize.wav
+[AppEvents\Schemes\Apps\.Default\RestoreUp\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\maximize.wav
+[AppEvents\Schemes\Apps\.Default\RingIn\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\Ringout\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemAsterisk\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemExclamation\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\def sound.wav
+[AppEvents\Schemes\Apps\.Default\SystemExit\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\Exit Windows.wav
+[AppEvents\Schemes\Apps\.Default\SystemHand\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\error gravi.wav
+[AppEvents\Schemes\Apps\.Default\SystemNotification\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\def sound.wav
+[AppEvents\Schemes\Apps\.Default\SystemQuestion\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\def sound.wav
+[AppEvents\Schemes\Apps\.Default\SystemStart\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\Start Windows.wav
+[AppEvents\Schemes\Apps\.Default\SystemStartMenu\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\WindowsLogoff\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\log off.wav
+[AppEvents\Schemes\Apps\.Default\WindowsLogon\.Current]
+DefaultValue=%WinDir%Resources\Themes\STALKER\Sounds\log on.wav
+[AppEvents\Schemes\Apps\Explorer\EmptyRecycleBin\.Current]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\Navigating\.Current]
+DefaultValue=
+[Control Panel\Cursors.A]
+Arrow=%WinDir%Resources\Themes\STALKER\Ñursors\Normal.ani
+Help=%WinDir%Resources\Themes\STALKER\Ñursors\Help.ani
+AppStarting=%WinDir%Resources\Themes\STALKER\Ñursors\Wait.ani
+Wait=%WinDir%Resources\Themes\STALKER\Ñursors\Busy.ani
+[Control Panel\Cursors.W]
+Arrow=+ACU-WinDir+ACU-Resources+AFw-Themes+AFw-STALKER+AFwEIQ-ursors+AFw-Normal.ani
+Help=+ACU-WinDir+ACU-Resources+AFw-Themes+AFw-STALKER+AFwEIQ-ursors+AFw-Help.ani
+AppStarting=+ACU-WinDir+ACU-Resources+AFw-Themes+AFw-STALKER+AFwEIQ-ursors+AFw-Wait.ani
+Wait=+ACU-WinDir+ACU-Resources+AFw-Themes+AFw-STALKER+AFwEIQ-ursors+AFw-Busy.ani
