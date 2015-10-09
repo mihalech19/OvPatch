@@ -15,7 +15,7 @@ fog_override_enable 1 // Удаляет белый туман, который о
 dota_minimap_draw_fow 0 // Полностью удаляет Туман Войны на МиниКарте<br> 
 dota_range_display 1 // Активирует графический радиус вокруг героя (зелёный круг)<br> 
 dota_range_display 1200 // Дистанция зелёного круга (Работает в Совместной игре с Ботами)<br>
-cl_weather 1-6 // Смена погоды
+cl_weather 1-6 // Смена погоды<br>
 <br>
 <img src="http://jet-shark.ucoz.ru/images_posts_2/vzlom-override_vpk2.jpg" class="bbCodeImage LbImage" alt="[&#8203;IMG]" data-url="http://jet-shark.ucoz.ru/images_posts_2/vzlom-override_vpk2.jpg" style=""> <br>
 <br>
