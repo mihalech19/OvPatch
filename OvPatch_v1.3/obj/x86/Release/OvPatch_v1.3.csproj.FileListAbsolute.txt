@@ -1,9 +1,0 @@
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch_v1.3.exe
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\bin\Release\OvPatch_v1.3.pdb
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1._3.MainForm.resources
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1._3.Properties.Resources.resources
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1._3.updaterForm.resources
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1.3.csproj.GenerateResource.Cache
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1.3.exe.licenses
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1.3.exe
-C:\Users\Admin\documents\visual studio 2010\Projects\OvPatch_v1.3\OvPatch_v1.3\obj\x86\Release\OvPatch_v1.3.pdb
