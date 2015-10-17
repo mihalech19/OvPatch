@@ -196,7 +196,7 @@ namespace OvPatch
                         Patch.CreateBackup(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame]);
                    
                     sEngine2Dll = File.ReadAllText(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame], Encoding.Default);
-                   // sPanoramaDll = File.ReadAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], Encoding.Default);
+                    sPanoramaDll = File.ReadAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], Encoding.Default);
 
                     if (unlockAddonsCheckBox.Checked)
                         Patch.UnlockAddons(ref sEngine2Dll, ref sClientDll, ref sPanoramaDll, Settings.Default.selectedGame);
