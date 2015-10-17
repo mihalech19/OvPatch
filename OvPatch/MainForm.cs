@@ -202,7 +202,7 @@ namespace OvPatch
                         Patch.UnlockAddons(ref sEngine2Dll, ref sClientDll, ref sPanoramaDll, Settings.Default.selectedGame);
 
                     if (svCheatsCheckBox.Checked)
-                        Patch.UnlockSvCheats(ref sEngine2Dll, Settings.Default.selectedGame);
+                       // Patch.UnlockSvCheats(ref sEngine2Dll, Settings.Default.selectedGame);
 
                     File.WriteAllText(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame], sEngine2Dll,
                     Encoding.Default);
