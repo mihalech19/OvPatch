@@ -206,6 +206,9 @@ namespace OvPatch
 
                     File.WriteAllText(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame], sEngine2Dll,
                     Encoding.Default);
+
+                    File.WriteAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], sPanoramaDll,
+                    Encoding.Default);
                     
                 }
                 patchWorker.ReportProgress(80);

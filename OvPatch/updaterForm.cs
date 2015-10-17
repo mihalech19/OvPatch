@@ -14,7 +14,7 @@ namespace OvPatch
         private string currentVersionWithUrl;
         private bool noUpdating;
         private bool readyToUpdate;
-        private readonly string localVersion = "2.0.4";
+        private readonly string localVersion = "2.0.5";
         private readonly WebClient update = new WebClient();
         private readonly string UriVersion = "https://raw.githubusercontent.com/mihalech19/OvPatch/master/version.ini";
 
