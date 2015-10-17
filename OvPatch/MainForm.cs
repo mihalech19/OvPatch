@@ -15,6 +15,7 @@ namespace OvPatch
     {
         private Match cameraDistance;
         private String sEngine2Dll;
+        private String sPanoramaDll;
         private String sClientDll;
         private string steamPath = String.Empty;
 
@@ -26,6 +27,11 @@ namespace OvPatch
         private readonly string[] engine2DllPath =
         {
             @"\game\bin\win64\engine2.dll", @"\game\bin\win32\engine2.dll"
+        };
+
+        private readonly string[] PanoramaDllPath =
+        {
+            @"\game\bin\win64\panorama.dll", @"\game\bin\win32\panorama.dll"
         };
 
         private readonly updaterForm updateForm = new updaterForm();
@@ -190,9 +196,10 @@ namespace OvPatch
                         Patch.CreateBackup(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame]);
                    
                     sEngine2Dll = File.ReadAllText(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame], Encoding.Default);
+                   // sPanoramaDll = File.ReadAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], Encoding.Default);
 
                     if (unlockAddonsCheckBox.Checked)
-                        Patch.UnlockAddons(ref sEngine2Dll, ref sClientDll, Settings.Default.selectedGame);
+                        Patch.UnlockAddons(ref sEngine2Dll, ref sClientDll, ref sPanoramaDll, Settings.Default.selectedGame);
 
                     if (svCheatsCheckBox.Checked)
                         Patch.UnlockSvCheats(ref sEngine2Dll, Settings.Default.selectedGame);

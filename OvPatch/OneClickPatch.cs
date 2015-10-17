@@ -18,6 +18,11 @@ internal class OneClickPatch
             @"\game\bin\win32\engine2.dll", @"\game\bin\win64\engine2.dll"
         };
 
+        string[] sPanoramaDllPath =
+        {
+            @"\game\bin\win32\panorama.dll", @"\game\bin\win64\panorama.dll"
+        };
+
         try
         {
             if (Environment.GetCommandLineArgs()[7] == "1")
@@ -34,9 +39,10 @@ internal class OneClickPatch
                 Patch.CreateBackup(Environment.GetCommandLineArgs()[1] + sEngine2DllPath[int.Parse(Environment.GetCommandLineArgs()[2])]);
                 
                 var sEngine2DllFile = File.ReadAllText(Environment.GetCommandLineArgs()[1] + sEngine2DllPath[int.Parse(Environment.GetCommandLineArgs()[2])], Encoding.Default);
+                var sPanoramaDllFile = File.ReadAllText(Environment.GetCommandLineArgs()[1] + sPanoramaDllPath[int.Parse(Environment.GetCommandLineArgs()[2])], Encoding.Default);
                 
                 if (Environment.GetCommandLineArgs()[5] == "1")
-                Patch.UnlockAddons(ref sEngine2DllFile, ref sClientDllFile, 1 ^ int.Parse(Environment.GetCommandLineArgs()[2]));
+                Patch.UnlockAddons(ref sEngine2DllFile, ref sClientDllFile, ref sPanoramaDllFile, 1 ^ int.Parse(Environment.GetCommandLineArgs()[2]));
 
                 if (Environment.GetCommandLineArgs()[6] == "1")
                     Patch.UnlockSvCheats(ref sEngine2DllFile, 1 ^ int.Parse(Environment.GetCommandLineArgs()[2]));
