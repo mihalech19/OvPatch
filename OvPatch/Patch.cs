@@ -60,69 +60,75 @@ internal class Patch
             MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
-    public static void UnlockAddons(ref string sEngine2Dll, ref string sClientDll, ref string sPanoramaDll, int iBitsOS)
+    public static void UnlockAddons(ref string sEngine2Dll, ref string sClientDll, /*ref string sPanoramaDll,*/ int iBitsOS)
     {
-//--------------------------------------------engine2.dll x32-------------------------------------------------------------------------------
-        byte[] sigEngine32Addons = new byte[] { 0xFF, 0xD2, 0x84, 0xC0, 0x74, 0x3B };
-        byte[] sigEngine32AddonsCracked = new byte[] { 0xFF, 0xD2, 0x84, 0xC0, 0x90, 0x90 };
-        byte[] sigEngine32Addons2 = new byte[] { 0x6A, 0x00, 0x8B, 0x01, 0xFF, 0x90, 0xC0, 0x00, 0x00, 0x00, 0x56 };
-        byte[] sigEngine32AddonsCracked2 = new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 };
-//--------------------------------------------client.dll x32-------------------------------------------------------------------------------
-        byte[] sigClient32Addons = new byte[] { 0xFF, 0x90, 0xBC, 0x00, 0x00, 0x00, 0x85, 0xC0, 0x74, 0x25 };
-        byte[] sigClient32AddonsCracked = new byte[] { 0xFF, 0x90, 0xBC, 0x00, 0x00, 0x00, 0x85, 0xC0, 0xEB, 0x25 };
-//--------------------------------------------panorama.dll x32------------------------------------------------------------------------------
-        byte[] sigPanorama32Compendium = { 0xFF, 0xD0, 0x84, 0xC0, 0x0F, 0x84, 0xDB, 0x00, 0x00, 0x00 };
-        byte[] sigPanorama32CompendiumCracked = { 0xFF, 0xD0, 0x84, 0xC0, 0xE9, 0xDC, 0x00, 0x00, 0x00, 0x90 };
-//--------------------------------------------engine2.dll x64-------------------------------------------------------------------------------
+        //--------------------------------------------engine2.dll x32-------------------------------------------------------------------------------
+        byte[] sigEngine32Addons = new byte[] { 0x8B, 0x52, 0x50, 0xFF, 0xD2, 0x84, 0xC0, 0x74, 0x55 };
+        byte[] sigEngine32AddonsCracked = new byte[] { 0x8B, 0x52, 0x50, 0xFF, 0xD2, 0x84, 0xC0, 0x90, 0x90 };
+        byte[] sigEngine32Addons2 = new byte[] { 0x8B, 0x01, 0xFF, 0x90, 0xC0, 0x00, 0x00, 0x00, 0x88 };
+        byte[] sigEngine32AddonsCracked2 = new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 };
+        //--------------------------------------------client.dll x32-------------------------------------------------------------------------------
+        // byte[] sigClient32Addons = new byte[] { 0xFF, 0x90, 0xBC, 0x00, 0x00, 0x00, 0x85, 0xC0, 0x74, 0x25 };
+        //byte[] sigClient32AddonsCracked = new byte[] { 0xFF, 0x90, 0xBC, 0x00, 0x00, 0x00, 0x85, 0xC0, 0xEB, 0x25 };
+        //--------------------------------------------panorama.dll x32------------------------------------------------------------------------------
+        // byte[] sigPanorama32Compendium = { 0xFF, 0xD0, 0x84, 0xC0, 0x0F, 0x84, 0xDB, 0x00, 0x00, 0x00 };
+        //byte[] sigPanorama32CompendiumCracked = { 0xFF, 0xD0, 0x84, 0xC0, 0xE9, 0xDC, 0x00, 0x00, 0x00, 0x90 };
+        //--------------------------------------------engine2.dll x64-------------------------------------------------------------------------------
         byte[] sigEngine64Addons = new byte[] { 0xFF, 0x92, 0xA0, 0x00, 0x00, 0x00, 0x84, 0xC0, 0x74, 0x5D };
         byte[] sigEngine64AddonsCracked = new byte[] { 0xFF, 0x92, 0xA0, 0x00, 0x00, 0x00, 0x84, 0xC0, 0x90, 0x90 };
         byte[] sigEngine64Addons2 = new byte[] { 0x33, 0xD2, 0x48, 0x8B, 0x01, 0xFF, 0x90, 0x80, 0x01, 0x00, 0x00, 0x41 };
         byte[] sigEngine64AddonsCracked2 = new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 };
-//--------------------------------------------client.dll x64-------------------------------------------------------------------------------
-        byte[] sigClient64Addons = new byte[] { 0xFF, 0x90, 0x78, 0x01, 0x00, 0x00, 0x48, 0x85, 0xC0, 0x74, 0x2F };
-        byte[] sigClient64AddonsCracked = new byte[] { 0xFF, 0x90, 0x78, 0x01, 0x00, 0x00, 0x48, 0x85, 0xC0, 0xEB, 0x2F };
-//--------------------------------------------panorama.dll x64-----------------------------------------------------------------------------
-        byte[] sigPanorama64Compendium = { 0xFF, 0x90, 0x38, 0x01, 0x00, 0x00, 0x84, 0xC0, 0x0F, 0x84, 0x20, 0x01, 0x00, 0x00 };
-        byte[] sigPanorama64CompendiumCracked = { 0xFF, 0x90, 0x38, 0x01, 0x00, 0x00, 0x84, 0xC0, 0xE9, 0x21, 0x01, 0x00, 0x00, 0x90 };
-//-----------------------------------------------------------------------------------------------------------------------------------------
-        
+        //--------------------------------------------client.dll x64-------------------------------------------------------------------------------
+        //  byte[] sigClient64Addons = new byte[] { 0xFF, 0x90, 0x78, 0x01, 0x00, 0x00, 0x48, 0x85, 0xC0, 0x74, 0x2F };
+        //  byte[] sigClient64AddonsCracked = new byte[] { 0xFF, 0x90, 0x78, 0x01, 0x00, 0x00, 0x48, 0x85, 0xC0, 0xEB, 0x2F };
+        //--------------------------------------------panorama.dll x64-----------------------------------------------------------------------------
+        // byte[] sigPanorama64Compendium = { 0xFF, 0x90, 0x38, 0x01, 0x00, 0x00, 0x84, 0xC0, 0x0F, 0x84, 0x20, 0x01, 0x00, 0x00 };
+        // byte[] sigPanorama64CompendiumCracked = { 0xFF, 0x90, 0x38, 0x01, 0x00, 0x00, 0x84, 0xC0, 0xE9, 0x21, 0x01, 0x00, 0x00, 0x90 };
+        //-----------------------------------------------------------------------------------------------------------------------------------------
+
         Encoding enc = Encoding.Default;
 
-        switch(iBitsOS)
+        switch (iBitsOS)
         {
             case 0:
                 Patch.SigReplace(ref sEngine2Dll, sigEngine64Addons, sigEngine64AddonsCracked);
                 Patch.SigPasteWithReplace(ref sEngine2Dll, sigEngine64Addons2, sigEngine64AddonsCracked2);
-                Patch.SigReplace(ref sPanoramaDll, sigPanorama64Compendium, sigPanorama64CompendiumCracked);
-                Patch.SigReplace(ref sClientDll, sigClient64Addons, sigClient64AddonsCracked);
+                // Patch.SigReplace(ref sPanoramaDll, sigPanorama64Compendium, sigPanorama64CompendiumCracked);
+                // Patch.SigReplace(ref sClientDll, sigClient64Addons, sigClient64AddonsCracked);
                 break;
 
             case 1:
                 Patch.SigReplace(ref sEngine2Dll, sigEngine32Addons, sigEngine32AddonsCracked);
                 Patch.SigPasteWithReplace(ref sEngine2Dll, sigEngine32Addons2, sigEngine32AddonsCracked2);
-                Patch.SigReplace(ref sPanoramaDll, sigPanorama32Compendium, sigPanorama32CompendiumCracked);
-                Patch.SigReplace(ref sClientDll, sigClient32Addons, sigClient32AddonsCracked);
+                // Patch.SigReplace(ref sPanoramaDll, sigPanorama32Compendium, sigPanorama32CompendiumCracked);
+                // Patch.SigReplace(ref sClientDll, sigClient32Addons, sigClient32AddonsCracked);
                 break;
         }
     }
 
     public static void UnlockSvCheats(ref string sEngine2Dll, int iBitsOS)
     {
-//--------------------------------------------engine2.dll x64-------------------------------------------------------------------------------
-        byte[] sigEngine64SvCheats = new byte[] { 0xFF, 0x90, 0xA0, 0x00, 0x00, 0x00, 0x84, 0xC0, 0x74, 0x2C };
-        byte[] sigEngine64SvCheatsCracked = new byte[] { 0xFF, 0x90, 0x80, 0x00, 0x00, 0x00, 0x84, 0xC0, 0xEB, 0x2C };
-//--------------------------------------------engine2.dll x32-------------------------------------------------------------------------------
-        byte[] sigEngine32SvCheats = new byte[] { 0xF3, 0x0F, 0x11, 0x45, 0x08, 0xFF, 0xD0, 0x84, 0xC0, 0x74, 0x2E };
-        byte[] sigEngine32SvCheatsCracked = new byte[] { 0xFF, 0x90, 0xA0, 0x00, 0x00, 0x00, 0x84, 0xC0, 0xEB, 0x2C };
-//-----------------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------engine2.dll x64-------------------------------------------------------------------------------
+        byte[] sigEngine64SvCheats = new byte[] { 0x3E, 0x00, 0x83, 0x78, 0x58, 0x00, 0x74, 0x09, 0xE8, 0xB6 };
+        byte[] sigEngine64SvCheatsCracked = new byte[] { 0x3E, 0x00, 0x83, 0x78, 0x58, 0x00, 0x90, 0x90, 0xE8, 0xB6 };
+        byte[] sigEngine64SvCheats2 = new byte[] { 0xFF, 0x90, 0xA0, 0x00, 0x00, 0x00, 0x84, 0xC0, 0x74, 0x2C };
+        byte[] sigEngine64SvCheats2Cracked = new byte[] { 0xFF, 0x50, 0x40, 0x84, 0xC0, 0xEB, 0x1B };
+        //--------------------------------------------engine2.dll x32-------------------------------------------------------------------------------
+        byte[] sigEngine32SvCheats = new byte[] { 0x68, 0x00, 0x40, 0x00, 0x00, 0xFF, 0xD0, 0x84, 0xC0, 0x74, 0x6E };
+        byte[] sigEngine32SvCheatsCracked = new byte[] { 0x68, 0x00, 0x40, 0x00, 0x00, 0xFF, 0xD0, 0x84, 0xC0, 0xEB, 0x6E };
+        byte[] sigEngine32SvCheats2 = new byte[] { 0x8B, 0x01, 0x8B, 0x40, 0x78, 0xFF, 0xD0, 0x84, 0xC0, 0x75, 0x39 };
+        byte[] sigEngine32SvCheats2Cracked = new byte[] { 0x8B, 0x01, 0x8B, 0x40, 0x78, 0xFF, 0xD0, 0x84, 0xC0, 0xEB, 0x39 };
+        //-----------------------------------------------------------------------------------------------------------------------------------------
 
         switch (iBitsOS)
         {
             case 0:
                 Patch.SigReplace(ref sEngine2Dll, sigEngine64SvCheats, sigEngine64SvCheatsCracked);
+                Patch.SigReplace(ref sEngine2Dll, sigEngine64SvCheats2, sigEngine64SvCheats2Cracked);
                 break;
             case 1:
                 Patch.SigReplace(ref sEngine2Dll, sigEngine32SvCheats, sigEngine32SvCheatsCracked);
+                Patch.SigReplace(ref sEngine2Dll, sigEngine32SvCheats2, sigEngine32SvCheats2Cracked);
                 break;
         }
     }
@@ -132,7 +138,7 @@ internal class Patch
 
         try
         {
-             sDllFile = sDllFile.Replace(enc.GetString(bSig), enc.GetString(bSigCracked));
+            sDllFile = sDllFile.Replace(enc.GetString(bSig), enc.GetString(bSigCracked));
         }
         catch (Exception e)
         {
@@ -147,10 +153,10 @@ internal class Patch
         try
         {
             int iAddons32Index = sDllFile.IndexOf(enc.GetString(bStartSig)) + bStartSig.Length - 1;
-            if(iAddons32Index != -1)
-              sDllFile = sDllFile.Remove(iAddons32Index, bPastedSig.Length).Insert(iAddons32Index, enc.GetString(bPastedSig));
+            if (iAddons32Index != -1)
+                sDllFile = sDllFile.Remove(iAddons32Index, bPastedSig.Length).Insert(iAddons32Index, enc.GetString(bPastedSig));
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -178,12 +184,24 @@ internal class Patch
             MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
-
-    public static void CreateBackup(string clientDllPath)
+    public static int RestoreFromBackup(string sDllBackupPath)
     {
         try
         {
-            File.Copy(clientDllPath, clientDllPath + ".bak", true);
+            File.Copy(sDllBackupPath, sDllBackupPath.Replace(".bak", ""), true);
+            return 1;
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return 0;
+        }
+    }
+    public static void CreateBackup(string sDllPath)
+    {
+        try
+        {
+            File.Copy(sDllPath, sDllPath + ".bak", true);
         }
         catch (Exception e)
         {

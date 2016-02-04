@@ -65,6 +65,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.ourLabel2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCamDist)).BeginInit();
             this.optionsBox.SuspendLayout();
@@ -461,11 +462,24 @@
             this.ourLabel2.Text = "http://jet-shark.ucoz.ru";
             this.ourLabel2.Click += new System.EventHandler(this.ourLabel2_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(279, 325);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Restore from backup";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 345);
+            this.ClientSize = new System.Drawing.Size(403, 346);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.ourLabel2);
             this.Controls.Add(this.gamesBox);
             this.Controls.Add(this.optionsBox);
@@ -546,6 +560,7 @@
         public System.Windows.Forms.TextBox dotaFolder;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label ourLabel2;
+        private System.Windows.Forms.Label label5;
     }
 }
 

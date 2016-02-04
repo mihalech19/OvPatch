@@ -19,12 +19,12 @@ namespace OvPatch
         private String sClientDll;
         private string steamPath = String.Empty;
 
-        private readonly string[] dllPath =
+        private readonly string[] sClientDllPath =
         {
             @"\game\dota\bin\win64\client.dll", @"\game\dota\bin\win32\client.dll"
         };
 
-        private readonly string[] engine2DllPath =
+        private readonly string[] sEngine2DllPath =
         {
             @"\game\bin\win64\engine2.dll", @"\game\bin\win32\engine2.dll"
         };
@@ -89,7 +89,7 @@ namespace OvPatch
         private void dotaFolder_TextChanged(object sender, EventArgs e)
         {
             if (Directory.Exists(dotaFolder.Text) & File.Exists(dotaFolder.Text + @"\game\dota\pak01_dir.vpk") &
-                File.Exists(dotaFolder.Text + dllPath[Settings.Default.selectedGame]))
+                File.Exists(dotaFolder.Text + sClientDllPath[Settings.Default.selectedGame]))
             {
                 FoldersFind.SaveFolder(dotaFolder.Text);
                 if (!loadCamValueWorker.IsBusy)
@@ -108,7 +108,7 @@ namespace OvPatch
                 camDist.ReadOnly = true;
                 camDist.Text = "Choose the folder with Dota 2!";
             }
-            if (File.Exists(dotaFolder.Text + dllPath[Settings.Default.selectedGame] + ".bak"))
+            if (File.Exists(dotaFolder.Text + sClientDllPath[Settings.Default.selectedGame] + ".bak"))
                 backupCheckBox.Checked = false;
             else
                 backupCheckBox.Checked = true;
@@ -116,7 +116,7 @@ namespace OvPatch
 
         private void loadCamValueWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            sClientDll = File.ReadAllText(dotaFolder.Text + dllPath[Settings.Default.selectedGame],
+            sClientDll = File.ReadAllText(dotaFolder.Text + sClientDllPath[Settings.Default.selectedGame],
                 Encoding.Default);
             cameraDistance = Patch.FindCameraDistance(ref sClientDll);
         }
@@ -163,7 +163,7 @@ namespace OvPatch
             {
                 if (!camDist.ReadOnly & Directory.Exists(dotaFolder.Text) &
                     File.Exists(dotaFolder.Text + @"\game\dota\pak01_dir.vpk") &
-                    File.Exists(dotaFolder.Text + dllPath[Settings.Default.selectedGame]))
+                    File.Exists(dotaFolder.Text + sClientDllPath[Settings.Default.selectedGame]))
                 {
                     Enabled = false;
                     patchWorker.RunWorkerAsync();
@@ -184,7 +184,7 @@ namespace OvPatch
             try
             {
                 if (backupCheckBox.Checked)
-                    Patch.CreateBackup(dotaFolder.Text + dllPath[Settings.Default.selectedGame]);
+                    Patch.CreateBackup(dotaFolder.Text + sClientDllPath[Settings.Default.selectedGame]);
 
                 patchWorker.ReportProgress(30);
                 Patch.ChangeCameraDistance(ref sClientDll, cameraDistance, camDist.Text);
@@ -194,28 +194,27 @@ namespace OvPatch
                 {
                     if (backupCheckBox.Checked)
                     { 
-                        Patch.CreateBackup(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame]);
-                        Patch.CreateBackup(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame]);
+                        Patch.CreateBackup(dotaFolder.Text + sEngine2DllPath[Settings.Default.selectedGame]);
+                       // Patch.CreateBackup(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame]);
                     }
                    
-                    sEngine2Dll = File.ReadAllText(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame], Encoding.Default);
-                    sPanoramaDll = File.ReadAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], Encoding.Default);
+                    sEngine2Dll = File.ReadAllText(dotaFolder.Text + sEngine2DllPath[Settings.Default.selectedGame], Encoding.Default);
+                    // sPanoramaDll = File.ReadAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], Encoding.Default);
 
                     if (unlockAddonsCheckBox.Checked)
-                        Patch.UnlockAddons(ref sEngine2Dll, ref sClientDll, ref sPanoramaDll, Settings.Default.selectedGame);
+                        Patch.UnlockAddons(ref sEngine2Dll, ref sClientDll, /*ref sPanoramaDll,*/ Settings.Default.selectedGame);
 
-                    //if (svCheatsCheckBox.Checked)
-                       // Patch.UnlockSvCheats(ref sEngine2Dll, Settings.Default.selectedGame);
+                    if (svCheatsCheckBox.Checked)
+                        Patch.UnlockSvCheats(ref sEngine2Dll, Settings.Default.selectedGame);
 
-                    File.WriteAllText(dotaFolder.Text + engine2DllPath[Settings.Default.selectedGame], sEngine2Dll,
+                    File.WriteAllText(dotaFolder.Text + sEngine2DllPath[Settings.Default.selectedGame], sEngine2Dll,
                     Encoding.Default);
 
-                    File.WriteAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], sPanoramaDll,
-                    Encoding.Default);
+                    // File.WriteAllText(dotaFolder.Text + PanoramaDllPath[Settings.Default.selectedGame], sPanoramaDll, Encoding.Default);
                     
                 }
                 patchWorker.ReportProgress(80);
-                File.WriteAllText(dotaFolder.Text + dllPath[Settings.Default.selectedGame], sClientDll,
+                File.WriteAllText(dotaFolder.Text + sClientDllPath[Settings.Default.selectedGame], sClientDll,
                     Encoding.Default);
             }
             catch (Exception ex)
@@ -232,10 +231,10 @@ namespace OvPatch
         private void patchWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             progressBar1.Value = 100;
-            if (backupCheckBox.Checked)
+            /* if (backupCheckBox.Checked)
                 backupCheckBox.Checked = false;
             if (unlockAddonsCheckBox.Checked)
-                unlockAddonsCheckBox.Checked = false;
+                unlockAddonsCheckBox.Checked = false; */
             Enabled = true;
             MessageBox.Show("Done!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             progressBar1.Value = 0;
@@ -329,6 +328,35 @@ namespace OvPatch
         private void ourLabel2_Click(object sender, EventArgs e)
         {
             Process.Start("http://jet-shark.ucoz.ru");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (!camDist.ReadOnly)
+            {
+                int iFilesRestored = 0;
+                if (File.Exists(dotaFolder.Text + sClientDllPath[0] + ".bak"))
+                   iFilesRestored += Patch.RestoreFromBackup(dotaFolder.Text + sClientDllPath[0] + ".bak");
+                if (File.Exists(dotaFolder.Text + sClientDllPath[1] + ".bak"))
+                   iFilesRestored += Patch.RestoreFromBackup(dotaFolder.Text + sClientDllPath[1] + ".bak");
+                if (File.Exists(dotaFolder.Text + sEngine2DllPath[0] + ".bak"))
+                   iFilesRestored += Patch.RestoreFromBackup(dotaFolder.Text + sEngine2DllPath[0] + ".bak");
+                if (File.Exists(dotaFolder.Text + sEngine2DllPath[1] + ".bak"))
+                   iFilesRestored +=  Patch.RestoreFromBackup(dotaFolder.Text + sEngine2DllPath[1] + ".bak");
+                
+                if(iFilesRestored > 1)
+                MessageBox.Show(iFilesRestored + " files were successfully restored", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if(iFilesRestored == 1)
+                    MessageBox.Show(iFilesRestored + " file was successfully restored", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Backups are not found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (camDist.Text == "Loading...")
+                MessageBox.Show("The program is still loading, just a minute please", "Warning", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            else
+                MessageBox.Show("First choose the correct folder with Dota 2!", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
         }
     }
 }
