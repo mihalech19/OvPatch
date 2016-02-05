@@ -344,12 +344,18 @@ namespace OvPatch
                 if (File.Exists(dotaFolder.Text + sEngine2DllPath[1] + ".bak"))
                    iFilesRestored +=  Patch.RestoreFromBackup(dotaFolder.Text + sEngine2DllPath[1] + ".bak");
                 
-                if(iFilesRestored > 1)
-                MessageBox.Show(iFilesRestored + " files were successfully restored", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else if(iFilesRestored == 1)
+                if(iFilesRestored == 0)
+                {
+                    MessageBox.Show("Backups are not found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                dotaFolder_TextChanged(new object(), EventArgs.Empty);
+
+                if (iFilesRestored == 1)
                     MessageBox.Show(iFilesRestored + " file was successfully restored", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Backups are not found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(iFilesRestored + " files were successfully restored", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);    
             }
             else if (camDist.Text == "Loading...")
                 MessageBox.Show("The program is still loading, just a minute please", "Warning", MessageBoxButtons.OK,
